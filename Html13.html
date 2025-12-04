@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sample HTML Document</title>
+<style>
+    menu {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    h1 {
+        color: #333;
+    }
+    p {
+        line-height: 1.6;
+    }
+    a {
+        color: #0066cc;
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <h2 style="text-align: center;"> welcome to this uhh site </h2>
+    <br>
+    <p style="text-align: center;" this a site with some text on it. </p>
+    <br>
+    <b style="text-align: center;">
+        Now you might be wondering, how do I go to a different page?
+        <br>
+        Well, you can click the button below to be redirected to another page!
+    </b>
+    <hr>
+    <button style="display: block; margin: 0 auto;" role="link" onclick="location.href='html12.html'"> Heres a redirect to go to a nother web </button>
+    <br>
+    <p> click the button to go to a different page 
+        <br>
+        uhh anyways here's an adress to my email
+        <br>
+        <a href="mailto:mahadirgaarai@gmail.com">Send an email pls</a>
+    </p>
+<hr>
+    <p> 
+        also would you like to know a fun fact?
+        <br>
+        well here it is:
+        <br>
+        Did you know that honey never spoils? Archaeologists have found pots of honey in ancient Egyptian tombs that are over 3,000 years old and still perfectly edible!
+        <br> uhh anyways hope you liked that fun fact
+        <br>
+        and heres a cool trick: 
+    </p>
+    <hr>
+    <i>i swear this is cool</i>
+    <br>
+
+    <button onclick="showPlane()"> Click me for a cool image! </button>
+    <p style="opacity: 20%;"> the image is at the end of the page</p>
+    <hr>
+    <br>
+    <p> i know you want it </p>
+
+    <template id="showPlane">
+          <h2>Boeing 737</h2>
+        <img src="https://ascendairways.aero/wp-content/uploads/2023/12/Ascend-Airways-Boeing-737-800.jpg" width="400" height="300">
+    </template>
+
+    <button id="jpgButton"> Click me for a cool image! </button>
+
+<template id="secondImage">
+  <h2>LOOK ITS A CRUSTY JPG</h2>
+  <br>
+  <img src="download(2).jpg" width="400" height="300" alt="Crusty JPG Image">
+</template>
+
+<script>
+  document.getElementById('jpgButton').addEventListener('click', function () {
+    let template = document.querySelector('#secondImage');
+    let clone = template.content.cloneNode(true);
+    document.body.appendChild(clone);
+  });
+</script>
+
+    <p> sorry guys the JPG Doesnt seem to appear :]</p>
+
+    <script>
+       function showPlane() {
+            let template = document.querySelector('#showPlane');
+            let clone = template.content.cloneNode(true);
+            document.body.appendChild(clone);
+
+        }
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("public_B51FbJPO0WzojXpSb"); // replace with your actual public key
+    emailjs.sendForm('service_r6zklwo', 'template_holl29z', document.querySelector('form'))
+      .then(function() {
+        console.log('SUCCESS!');
+      }, function(error) {
+        console.log('FAILED...', error);
+      });
+  })();
+</script>
+
+
+
+    <search>
+        <form id="sendForm">
+            <label for="username">username:</label>
+            <input type="text" id="username" name="username">
+           
+            <br>
+            <label for="email">email:</label>
+            <input type="email" id="email" name="email">
+            
+            <br>
+            <label for="password">password:</label>
+            <input type="password" id="password" name="password">
+           
+            <br>
+            <label for="Realname">Realname:</label>
+            <input type="text" id="Realname" name="Realname">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </search>
+
+        <b> Dont send the email it doesnt work
+            <br>
+            im trying to figure it out
+            <br>
+            but yeah
+            <br>
+            thanks for trying it out :]
+        </b>
+
+        <ul>
+            <li>
+            Made by me ofc
+            <li>
+            and uhh idk what to put here
+            <li>
+            i need to think of more stuff to put here
+            <li>
+            this is getting boring
+            <li>
+            ok bye
+            </li>
+            </li>
+        </ul>
+
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<!-- Initialize and bind event listener -->
+<script>
+
+  // Step 2: Wait until the page is fully loaded
+  window.addEventListener('DOMContentLoaded', function () {
+    // Step 3: Bind the submit event to your form
+    document.getElementById('sendForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Stop normal form submission
+
+      // Step 4: Send the form using EmailJS
+      emailjs.sendForm('service_r6zklwo', 'template_holl29z', this)
+        .then(function() {
+          console.log('SUCCESS!');
+        }, function(error) {
+          console.log('FAILED...', error);
+        });
+    });
+  });
+</script>
+
+<div id="end-square"></div>
+
+<style>
+    #end-square {
+        border-top: 2px solid #333;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        font-family: monospace;
+        font-size: 14px;
+        color: #666;
+        border-top: dashed;
+    }
+
+    #end-square ::before {
+        content: " - End of Document - ";
+        display: inline-block;
+
+    }
+</style>
+
+   <address>
+        &copy; 2024 mahadirgaarai. All rights reserved.
+        <a href="mailto:mahadirgaarai@gmail.com">Contact me</a>
+    </address>
+
+
+</body>
+</html>
+
+   
+
+
+
+   
